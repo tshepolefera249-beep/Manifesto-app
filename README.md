@@ -1,5 +1,282 @@
-# Manifesto-app
-Manifesto is a civic engagement and government transparency platform for South Africa. The app empowers citizens, especially youth, to debate, petition, participate in surveys, track government promises, monitor projects, and verify media updates. It integrates social-style engagement with real-time transparency tools.
+# Manifesto
 
+**Manifesto** is a South African civic engagement platform that empowers citizens to participate in democracy, track government accountability, and engage with civic processes.
 
-🏛️ Manifesto — The People’s Accountability Platform Manifesto is a South African civic-tech super app that empowers citizens — especially the youth — to debate, organize, and hold government accountable through open data, verified participation, and social engagement. It’s where democracy meets design — part Instagram, part LinkedIn, part GovTech control room. ⚙️ Core Purpose To create a transparent, participatory, and data-driven political ecosystem where: Citizens can track promises, projects, and budgets in real time. Government leaders and departments are visible, measurable, and accountable. Youth can debate, collaborate, and take civic action directly from their phones. Every voice contributes to a living record of national progress — visible to all. 💡 Core Vision “A government that can be seen, measured, and improved by the people it serves.” Manifesto redefines civic participation — not just by reporting issues, but by creating a transparent digital mirror of government activity and citizen engagement. 🔑 Core Features 1. Authentication & Profile System Secure sign-up with name, phone, and OTP verification. Optional setup: photo, bio, and civic interests. Shared identity across the Votility ecosystem (Pro, Gov, and Manifesto). Public profile with badges, recognitions, and activity feed. 2. Home Feed (Engagement Hub) Dynamic scrollable feed showing: Latest debates, polls, petitions, and verified news. Uploaded project photos/videos from citizens. AI-verified government updates and data. “Slide right to open camera” — record or post from gallery (Instagram-style). Add filters and tags like #Accountability, #Education, #Infrastructure. 3. Debates Structured debate rooms for verified civic discussions. “Agree / Disagree / Neutral” reactions. Comment threads with upvote/downvote credibility scoring. Archive of past debates linked to projects or policies. 4. Polls & Surveys Citizens can create or vote in polls. Real-time results visualized in graphs. Long-form surveys for deeper public sentiment. Integrated into leader and project profiles. 5. Petitions Create petitions with title, description, target goal, and deadline. Track signatures in real time. Linked to related debates, polls, and leaders. 6. Government & Leader Accountability Hub A top-tier navigation module with four main sections: A. Leaders Directory of politicians — from the President to youth league reps. Each profile shows: Biography, position, and party affiliation. Promises made and progress status. Associated projects, scandals, and achievements. Public approval ratings and citizen comments. B. Departments Overview of national and provincial departments. Each shows: Budgets, expenditures, and key initiatives. Issues faced and accomplishments. Linked projects and campaigns. Citizen feedback and performance ratings. C. Projects & Tenders Live tracker of all government projects and tenders: Project title, description, stage, deadlines. Budget allocation vs actual spending. Responsible company/person. Jobs created, milestones achieved. Citizen-uploaded media (photo/video) to verify progress. Comments and discussion section. D. Parliament Coverage of current parliamentary activity: Bills being debated and passed. Attendance and voting records. Live updates, summaries, and transparency reports. Debates and polls linked to parliamentary topics. 7. Transparency Features Fact-check badges — verified vs unverified promises. AI-driven insights — detect corruption risk or data inconsistency. Budget visualization — animated charts showing money flow. Public project map — geolocation of projects with progress indicators. Open-data integration — link to official datasets for validation. 8. Recognition & Gamification Users earn badges: 🗣️ Debater ✍️ Petition Leader 🧠 Fact Checker 📸 Project Reporter 💪 Accountability Champion Monthly leaderboard for most active citizens. Verified contributors featured publicly. 9. AI and Media Verification AI scans uploaded photos/videos to detect authenticity (metadata, geotags). Automatic linking of media to known project locations. “Verified Citizen” badge for consistent, credible reporters. Generative summaries of government progress (e.g., “Out of 100 promises this term, 36 fulfilled, 18 ongoing, 46 unfulfilled”). 10. Integration with Votility Pro & Gov Shared identity system: one login across the Votility ecosystem. Data sync between Manifesto and Votility Gov: Petitions → can become official policy proposals. Debates → can inform government AI dashboards. Polls & surveys → feed into civic sentiment analytics. 🧩 Future Features AI Civic Advisor: Personalized feed recommending actions based on interests (e.g., “Join this debate on youth unemployment”). Blockchain-backed transparency ledger: Immutable record of promises, spending, and citizen reports. Citizen Media Rewards: Incentives for uploading verified project progress updates. Offline Mode: Allow rural citizens to participate via SMS/USSD. Data Trust Score: Rate leaders and departments on consistency between words, budgets, and results. 🚀 Current Stage (as of now) ✅ Concept fully designed and documented ✅ Master prompt ready for UI and architecture generation 🔄 Preparing GitHub repo and feature roadmap 🔜 Next step: Launch build phase in Cursor Generate UI and file structure Link backend (Convex or Firebase) Build core modules: Auth, Feed, Debates, Government Hub 💬 Tagline Ideas “Democracy, redesigned.” “See your government. Shape your future.” “Transparency powered by the people.”
+## 🏛️ About
+
+Manifesto is a civic-tech super app that combines social engagement with government transparency. It enables citizens to:
+- Debate civic issues
+- Create and participate in polls and surveys
+- Start and sign petitions
+- Track government projects and budgets
+- Monitor leader promises and performance
+- Upload and verify citizen media
+- Engage with parliamentary activity
+
+## 🚀 Features
+
+- **Authentication**: Sign up with phone OTP, email, and password
+- **Home Feed**: Unified feed of debates, polls, petitions, and media
+- **Debates**: Structured debate rooms with reactions
+- **Polls & Surveys**: Create and vote in polls with real-time results
+- **Petitions**: Create and sign petitions with progress tracking
+- **Government Hub**: Comprehensive government transparency modules
+  - **Leaders**: Directory with promises, achievements, and ratings
+  - **Departments**: Budget tracking and performance monitoring
+  - **Projects & Tenders**: Project tracking with citizen media
+  - **Parliament**: Bills, sessions, and voting records
+- **Camera & Media**: Photo/video capture with filters and verification
+- **Real-time Updates**: Live data synchronization via Convex
+
+See [docs/FEATURES.md](docs/FEATURES.md) for complete feature list.
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React Native** with **Expo** (~50.0.0)
+- **TypeScript** for type safety
+- **React Navigation** (Stack + Bottom Tabs)
+- **NativeWind** (Tailwind CSS for React Native)
+- **Zustand** for state management
+- **Convex** hooks for real-time data
+
+### Backend
+- **Convex** for realtime database, auth, and server functions
+- **Cloudinary** (or S3) for media storage
+- **OpenAI/Gemini** for AI features (planned)
+
+### Development
+- **Jest** for unit testing
+- **Detox** for E2E testing (scaffold)
+- **ESLint** for code quality
+- **GitHub Actions** for CI/CD
+
+## 📋 Prerequisites
+
+- Node.js 18+
+- Yarn or npm
+- Expo CLI
+- Convex account (for backend)
+- iOS Simulator (for iOS development)
+- Android Studio (for Android development)
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd Manifesto-app
+```
+
+### 2. Install Dependencies
+
+```bash
+yarn install
+```
+
+### 3. Set Up Environment Variables
+
+Copy `.env.example` to `.env` and fill in your configuration:
+
+```bash
+cp .env.example .env
+```
+
+Required variables:
+- `CONVEX_URL` - Your Convex deployment URL
+- `CONVEX_DEPLOYMENT` - Convex deployment name
+- `CLOUDINARY_CLOUD_NAME` - Cloudinary cloud name (optional)
+- `CLOUDINARY_API_KEY` - Cloudinary API key (optional)
+- `OPENAI_API_KEY` - OpenAI API key (optional, for AI features)
+- `GEMINI_API_KEY` - Gemini API key (optional, for AI features)
+
+### 4. Set Up Convex
+
+```bash
+# Install Convex CLI globally if not already installed
+npm install -g convex
+
+# Initialize Convex (if not already done)
+npx convex dev
+```
+
+Follow the prompts to create a Convex project and get your deployment URL.
+
+### 5. Start the Development Server
+
+```bash
+# Start Expo dev server
+yarn start
+
+# Or run on specific platform
+yarn ios      # iOS simulator
+yarn android  # Android emulator
+yarn web      # Web browser
+```
+
+### 6. Start Convex Backend
+
+In a separate terminal:
+
+```bash
+yarn convex:dev
+```
+
+## 📱 Available Scripts
+
+- `yarn start` - Start Expo development server
+- `yarn ios` - Run on iOS simulator
+- `yarn android` - Run on Android emulator
+- `yarn web` - Run on web browser
+- `yarn test` - Run Jest unit tests
+- `yarn test:watch` - Run tests in watch mode
+- `yarn test:e2e` - Run Detox E2E tests
+- `yarn build` - Build for production
+- `yarn lint` - Run ESLint
+- `yarn lint:fix` - Fix ESLint errors
+- `yarn type-check` - Run TypeScript type checking
+- `yarn convex:dev` - Start Convex development server
+- `yarn convex:deploy` - Deploy Convex functions
+
+## 📁 Project Structure
+
+```
+Manifesto-app/
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── screens/          # Screen components
+│   ├── navigation/       # Navigation configuration
+│   ├── services/         # API and service integrations
+│   ├── store/            # Zustand state stores
+│   ├── hooks/            # Custom React hooks
+│   ├── types/            # TypeScript type definitions
+│   ├── utils/            # Utility functions
+│   ├── data/             # Mock data for development
+│   └── convex/           # Convex generated types (placeholder)
+├── convex/               # Convex backend
+│   ├── schema.ts         # Database schema
+│   ├── auth.ts           # Authentication functions
+│   ├── posts.ts          # Post functions
+│   ├── debates.ts        # Debate functions
+│   ├── polls.ts          # Poll functions
+│   ├── petitions.ts      # Petition functions
+│   ├── media.ts          # Media functions
+│   └── government.ts     # Government hub functions
+├── docs/                 # Documentation
+│   ├── FEATURES.md       # Feature documentation
+│   └── AI_PLAN.md        # AI integration plan
+├── e2e/                  # E2E tests (Detox)
+├── .github/workflows/    # CI/CD workflows
+├── App.tsx               # Main app entry point
+├── app.json              # Expo configuration
+├── package.json          # Dependencies
+└── tsconfig.json         # TypeScript configuration
+```
+
+## 🧪 Testing
+
+### Unit Tests
+
+```bash
+yarn test
+```
+
+### E2E Tests
+
+```bash
+# Build the app first
+yarn build
+
+# Run E2E tests
+yarn test:e2e
+```
+
+## 🏗️ Building for Production
+
+### iOS
+
+```bash
+# Build iOS app
+eas build --platform ios
+```
+
+### Android
+
+```bash
+# Build Android app
+eas build --platform android
+```
+
+## 🔧 Configuration
+
+### Convex Backend
+
+The Convex backend is configured in `convex/`. See `convex/schema.ts` for the data model.
+
+### Firebase Alternative
+
+Firebase configuration is commented out in `.env.example`. To use Firebase instead of Convex:
+
+1. Uncomment Firebase variables in `.env`
+2. Update auth service to use Firebase
+3. Update database queries to use Firebase
+4. Remove Convex dependencies
+
+## 🤝 Contributing
+
+1. Create a feature branch from `dev`
+2. Make your changes
+3. Write tests for new features
+4. Run linting and tests
+5. Submit a pull request
+
+## 📝 TODO
+
+See individual files for TODO comments. Major areas:
+
+- [ ] Complete Convex integration
+- [ ] Implement actual authentication
+- [ ] Integrate Cloudinary for media uploads
+- [ ] Implement AI features (see `docs/AI_PLAN.md`)
+- [ ] Add comprehensive tests
+- [ ] Implement offline mode
+- [ ] Add push notifications
+- [ ] Multi-language support
+
+## 📄 License
+
+[Add your license here]
+
+## 🙏 Acknowledgments
+
+- South African citizens for inspiration
+- Open source community for amazing tools
+- Convex for the excellent backend platform
+
+## 📞 Contact
+
+[Add contact information]
+
+## 🗺️ Roadmap
+
+### Phase 1 (Current)
+- ✅ Basic app structure
+- ✅ Navigation and screens
+- ✅ Convex backend schema
+- ✅ Mock data and UI
+- ⏳ Complete integrations
+- ⏳ Testing
+
+### Phase 2 (Planned)
+- AI Civic Advisor
+- Blockchain transparency
+- Citizen rewards
+- Offline mode
+- Advanced analytics
+
+See [docs/FEATURES.md](docs/FEATURES.md) for detailed roadmap.
+
+---
+
+**Built with ❤️ for South Africa**

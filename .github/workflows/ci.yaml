@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run linter
+        run: yarn lint
+
+      - name: Run type check
+        run: yarn type-check
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Check Convex schema
+        run: |
+          if [ -d "convex" ]; then
+            echo "Convex schema directory found"
+          else
+            echo "Warning: Convex directory not found"
+          fi
+
+  build-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Check Expo configuration
+        run: npx expo-doctor
+
+      - name: Validate app.json
+        run: node -e "JSON.parse(require('fs').readFileSync('app.json', 'utf8'))"
+
